@@ -1,4 +1,5 @@
 import type { Student } from "../types";
+import { mockDiagnostic } from "../assessment/diagnostic";
 
 export const mockStudent: Student = {
   id: "student-001",
@@ -27,81 +28,54 @@ export const mockStudent: Student = {
     preferredActivities: [
       "conversation",
       "listen_audio",
-      "watch_video",
     ],
     dislikedActivities: [
       "grammar_exercise",
     ],
   },
 
-  diagnostic: {
-    selfReportedLevel: "B1",
-    assessedAt: "2026-09-29",
+  diagnostics: [mockDiagnostic],
 
-    skills: [
-      {
-        skill: "grammar",
-        level: 0.55,
-        confidence: 0.8,
-      },
-      {
-        skill: "vocabulary",
-        level: 0.65,
-        confidence: 0.85,
-      },
-      {
-        skill: "reading",
-        level: 0.8,
-        confidence: 0.9,
-      },
-      {
-        skill: "listening",
-        level: 0.4,
-        confidence: 0.75,
-      },
-      {
-        skill: "speaking",
-        level: 0.5,
-        confidence: 0.65,
-      },
-      {
-        skill: "writing",
-        level: 0.6,
-        confidence: 0.7,
-      },
-    ],
-  },
+  evidence: [],
+
+  learningResults: [],
 
   skills: [
     {
       skill: "grammar",
       level: 0.55,
       confidence: 0.8,
+      lastUpdatedAt: "2026-09-29",
     },
     {
       skill: "vocabulary",
       level: 0.65,
       confidence: 0.85,
+      lastUpdatedAt: "2026-09-29",
     },
     {
       skill: "reading",
       level: 0.8,
       confidence: 0.9,
+      lastUpdatedAt: "2026-09-29",
     },
     {
       skill: "listening",
       level: 0.4,
       confidence: 0.75,
+      lastUpdatedAt: "2026-09-29",
     },
     {
       skill: "speaking",
       level: 0.5,
       confidence: 0.65,
+      lastUpdatedAt: "2026-09-29",
     },
     {
       skill: "writing",
       level: 0.6,
       confidence: 0.7,
+      lastUpdatedAt: "2026-09-29",
     },
   ],
 };

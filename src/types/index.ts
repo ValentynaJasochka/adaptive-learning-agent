@@ -40,7 +40,7 @@ export type SkillProgress = {
   skill: Skill;
   level: number;
   confidence: number;
-  lastAssessedAt?: string;
+  lastUpdatedAt: string;
 };
 
 export type LearningConstraints = {
@@ -55,10 +55,37 @@ export type LearningPreferences = {
   dislikedActivities: ActivityType[];
 };
 
-export type DiagnosticResult = {
-  selfReportedLevel?: CEFRLevel;
+export type Evidence = {
+  id: string;
+  sourceType: "diagnostic" | "learning_task";
+  sourceId: string;
+  observations: string[];
+  metrics: Record<string, number>;
+};
+
+export type SkillAssessment = {
+  skill: Skill;
+  level: number;
+  confidence: number;
   assessedAt: string;
-  skills: SkillProgress[];
+  evidenceIds: string[];
+};
+
+export type Diagnostic = {
+  id: string;
+  sequence: number;
+  assessedAt: string;
+  selfReportedLevel?: CEFRLevel;
+  skillAssessments: SkillAssessment[];
+};
+
+export type LearningResult = {
+  id: string;
+  taskId: string;
+  completedAt: string;
+  score?: number;
+  passed?: boolean;
+  evidenceIds: string[];
 };
 
 export type Student = {
@@ -75,7 +102,11 @@ export type Student = {
 
   preferences: LearningPreferences;
 
-  diagnostic?: DiagnosticResult;
+  diagnostics: Diagnostic[];
+
+  evidence: Evidence[];
+
+  learningResults: LearningResult[];
 
   skills: SkillProgress[];
 };
