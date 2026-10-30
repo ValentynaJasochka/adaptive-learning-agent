@@ -9,9 +9,8 @@ export const mockEvidence: Evidence[] = [
       "Correctly used basic tenses.",
       "Made several errors with conditionals.",
     ],
-    metrics: {
-      accuracy: 0.55,
-    },
+    skillScores: [{ skill: "grammar", score: 0.55 }],
+    createdAt: "2026-09-29",
   },
 
   {
@@ -22,9 +21,8 @@ export const mockEvidence: Evidence[] = [
       "Used a good range of everyday vocabulary.",
       "Had difficulty with some less common words.",
     ],
-    metrics: {
-      vocabularyRange: 0.65,
-    },
+    skillScores: [{ skill: "vocabulary", score: 0.65 }],
+    createdAt: "2026-09-29",
   },
 
   {
@@ -35,9 +33,8 @@ export const mockEvidence: Evidence[] = [
       "Understood the main idea of the text.",
       "Successfully identified most supporting details.",
     ],
-    metrics: {
-      comprehension: 0.8,
-    },
+    skillScores: [{ skill: "reading", score: 0.8 }],
+    createdAt: "2026-09-29",
   },
 
   {
@@ -48,9 +45,8 @@ export const mockEvidence: Evidence[] = [
       "Understood the general meaning.",
       "Missed several details in natural-speed speech.",
     ],
-    metrics: {
-      comprehension: 0.4,
-    },
+    skillScores: [{ skill: "listening", score: 0.4 }],
+    createdAt: "2026-09-29",
   },
 
   {
@@ -61,9 +57,8 @@ export const mockEvidence: Evidence[] = [
       "Can express basic ideas clearly.",
       "Needs more fluency and has difficulty with complex structures.",
     ],
-    metrics: {
-      fluency: 0.5,
-    },
+    skillScores: [{ skill: "speaking", score: 0.5 }],
+    createdAt: "2026-09-29",
   },
 
   {
@@ -74,8 +69,7 @@ export const mockEvidence: Evidence[] = [
       "Can structure a short text clearly.",
       "Made some grammatical and lexical errors.",
     ],
-    metrics: {
-      accuracy: 0.6,
-    },
+    skillScores: [{ skill: "writing", score: 0.6 }],
+    createdAt: "2026-09-29",
   },
 ];
